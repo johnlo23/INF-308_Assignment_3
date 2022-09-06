@@ -33,7 +33,11 @@ def unique_count(f_word):
 file = open('text.txt', 'w')
 
 # Get a word from the user
-word = input("Please enter one word: ")
+while True:
+    word = input("Please enter one word: ")
+    # Check there is at least one character in the word and no spaces
+    if len(word) > 0 and word.count(' ') == 0:
+        break
 
 # Write the word to a file
 file.write(word)
@@ -57,4 +61,4 @@ unique_letters = unique_count(file_word)
 print()
 print(f"You entered the word {file_word}.")
 print(f"The word {file_word} has {len_word} total characters.")
-print(f"There are {unique_letters} unique letters in the word {file_word}.")
+print(f"There are {unique_letters} unique characters in the word {file_word}.")
