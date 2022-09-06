@@ -4,8 +4,8 @@ file = open('text.txt', 'w')
 # Get a word from the user
 word = input("Please enter one word: ")
 
-# Write the word to a file with a trailing newline character
-file.write(word + "\n")
+# Write the word to a file
+file.write(word)
 
 file.close()
 
@@ -15,6 +15,12 @@ file = open('text.txt', 'r')
 # Read the contents of the file
 file_word = file.read()
 
-print(f"You entered and save the word {file_word}")
+# Get the length of the word
+len_word = len(file_word)
+
+# Print the results
+print()
+print(f"You entered and save the word {file_word}.")
+print(f"The word {file_word} has {len_word} total characters.")
 
 file.close()
